@@ -4,4 +4,4 @@ url = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_c
 
 response = requests.get(url)
 print(response.json())
-print("hi")
+print('test')
