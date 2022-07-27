@@ -1,5 +1,6 @@
 import requests
-url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=demo"
+api_key= "RNPKUJP5Z7T08SJ0"
+url = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey={api_key}"
 
 response = requests.get(url)
 print(response.json())
