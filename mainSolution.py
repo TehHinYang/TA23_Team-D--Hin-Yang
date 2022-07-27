@@ -1,7 +1,5 @@
-print("hiiiiiii")
-print ('ni hao')
-print("test")
-print('weeee')
-print("hi")
-print(" ")
-print(";D")
+import requests
+url = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey=demo"
+
+response = requests.get(url)
+print(response.json())
