@@ -4,7 +4,7 @@ def overheads_function():
   percentage = []
   overheads = {}
   file_path = Path.cwd()/"overheads-day-50.csv"
-  with file_path.open(mode="r", encoding = "UTF-8" as file:
+  with file_path.open(mode="r", encoding = "UTF-8") as file:
     reader = csv.reader(file)
     next(reader)
     for line in reader:
@@ -14,5 +14,7 @@ def overheads_function():
       overheads[data] = cat
     highest = max(percentage)
     highest_cat = overheads[highest]
+    message = f"[HIGHEST OVERHEADS] {highest_cat.upper}: {highest}%"
+    return message
     
 print(overheads_function())
