@@ -1,6 +1,6 @@
 # import modules
 from pathlib import Path
-import csv
+import csv,api
 
 # create a function to determine the highest overheads
 def overheads_function():
@@ -30,8 +30,8 @@ def overheads_function():
     highest = max(percentage)
     # extract the category name for the highest percentage from the dictionary
     highest_cat = overheads[highest]
-    # create a variable message with f-string showing the highest overheads
-    message = f"[HIGHEST OVERHEADS] {highest_cat.upper()}: {highest}%"
+    # create a variable message with f-string showing the highest overheads in SGD
+    message = f"[HIGHEST OVERHEADS] {highest_cat.upper()}: SGD{round(highest*api.forex,2)}"
     # return information on highest overheads
     return message
 
