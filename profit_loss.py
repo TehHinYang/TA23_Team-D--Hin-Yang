@@ -4,7 +4,7 @@ import csv,api
 def profit_loss_function():
     net_profit = []
     day = []
-    file_path = Path.cwd()/"profit-and-loss-usd (1).csv"
+    file_path = Path.cwd()/"csv_reports"/"profit-and-loss-usd (1).csv"
     with file_path.open(mode="r", encoding="UTF-8") as file:
         reader = csv.reader(file)
         next(reader)
