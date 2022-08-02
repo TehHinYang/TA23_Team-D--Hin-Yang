@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-from pathlib import Path
-import csv
-fp = Path.cwd()/"summary_report.txt"
-fp.touch()
-
-=======
 from pathlib import Path
 import csv,api
 
@@ -22,4 +15,3 @@ def cash_on_hand_function():
       day.append(days)
       
 print(cash_on_hand_function())
->>>>>>> 2cec0c446b2ed95f4aeb1641c4bd6c29fe075f5e
