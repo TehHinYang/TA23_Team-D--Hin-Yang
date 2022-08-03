@@ -16,7 +16,7 @@ forex = data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]
 # use the extracted data into a float
 forex = float(forex)
 
-# create a function
+# create a function to detremine the exchange rate
 def api_funtion():
     # assign api key into a string
     api_key= "RNPKUJP5Z7T08SJ0"

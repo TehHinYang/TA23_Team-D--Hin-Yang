@@ -4,7 +4,7 @@ import cash_on_hand,overheads,profit_loss,api
 
 # create a function to add all the information into a text file
 def mainsoultion_function():
-    # create a file path and create a new file 'summary_report.txt
+    # create a file path and create a new file 'summary_report.txt'
     fp = Path.cwd()/"summary_report.txt"
     # Create the file
     fp.touch()
