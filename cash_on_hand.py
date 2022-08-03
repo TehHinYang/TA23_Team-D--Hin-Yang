@@ -2,13 +2,13 @@
 from pathlib import Path
 import csv,api
 
-# create a function to determine the highest overheads
+# create a function to determine the difference in cash on hand between each day
 def cash_on_hand_function():
   # create an empty list
   amt_coh = []
   # create an empty list
   day = []
-  # create a file path to overheads csv file
+  # create a file path to cash on hand csv file
   file_path = Path.cwd()/"csv_reports"/"cash-on-hand-usd.csv"
   # open file to read the data in the file
   with file_path.open(mode="r", encoding="UTF-8") as file:
@@ -42,7 +42,7 @@ def cash_on_hand_function():
       difference.sort()
       # add a value of 1 to 'num'
       num += 1
-      # if statement to have a condition of the 'diff' less than or equal to 1
+      # if statement to have a condition of the 'diff' less than 1
       if diff <= 0:
         # change the amount in difference from USD to SGD
         diff = api.forex*abs(diff)
