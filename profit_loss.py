@@ -59,5 +59,5 @@ def profit_loss_function():
         # return information on the net profit
         return messages
 
-# print function to show result      
+# print function to show result
 print(profit_loss_function())
