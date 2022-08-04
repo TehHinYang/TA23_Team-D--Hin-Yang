@@ -39,10 +39,14 @@ def profit_loss_function():
         messages = []
         # create a while loop to add in the profit deficit from day 40 to 50
         while num < len(net_profit):
-            # extract the amount and change it into a float and find the difference on net profit between each day
-            diff = float (net_profit[num]) - float(net_profit[num-1])
-            # append the difference into an empty list
-            difference.append(diff)
+            try:
+                # extract the amount and change it into a float and find the difference on net profit between each day
+                diff = float (net_profit[num]) - float(net_profit[num-1])
+            except ValueError:
+                return "Make sure it is a number"
+            else:
+                # append the difference into an empty list
+                difference.append(diff)
             # sort the data in the list from smallest to largest.
             difference.sort()
             # add a value of 1 to 'num'
