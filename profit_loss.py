@@ -4,6 +4,10 @@ import csv,api
 
 # create a function to determine the difference in net profit between each day
 def profit_loss_function():
+    """
+    -This function reads the data from csv file and extracts both the day and net profit values to find the difference in net profit each day. It then determines which whether the business has a surplus or a deflict based on the values.
+    """
+  
     # create an empty list
     net_profit = []
     # create an empty list
