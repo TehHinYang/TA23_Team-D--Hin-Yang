@@ -4,6 +4,9 @@ import csv,api
 
 # create a function to determine the highest overheads
 def overheads_function():
+  """
+  - This functions reads the csv file, then extracts the overheads value out to find the category with the highest percentage.
+  """
   # create an empty list
   percentage = []
   # create an empty dictionary
