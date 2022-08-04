@@ -18,6 +18,9 @@ forex = float(forex)
 
 # create a function to detremine the exchange rate
 def api_funtion():
+    """
+    -This function obtains the exchange rate from the URL and converts the data from USD to SGD.
+    """
     # assign api key into a string
     api_key= "RNPKUJP5Z7T08SJ0"
     # f-string to insert api key into the url to get the exchange rate
