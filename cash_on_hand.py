@@ -4,6 +4,9 @@ import csv,api
 
 # create a function to determine the difference in cash on hand between each day
 def cash_on_hand_function():
+  """
+  - This function reads the cash on hand values in the csv files and calculates the differences for each days. It then determines whether it is a surplus of deflict
+  """
   # create an empty list
   amt_coh = []
   # create an empty list
