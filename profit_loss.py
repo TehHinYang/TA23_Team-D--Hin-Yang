@@ -39,11 +39,17 @@ def profit_loss_function():
         messages = []
         # create a while loop to add in the profit deficit from day 40 to 50
         while num < len(net_profit):
+            # start handling exception 
             try:
                 # extract the amount and change it into a float and find the difference on net profit between each day
                 diff = float (net_profit[num]) - float(net_profit[num-1])
+            # handling ValueError
             except ValueError:
-                return "Make sure it is a number"
+                # append the message for ValueError into an empty list
+                messages.append("Make sure it is a number")
+                # return the message for ValueError
+                return messages
+            # when there is no exceptions
             else:
                 # append the difference into an empty list
                 difference.append(diff)

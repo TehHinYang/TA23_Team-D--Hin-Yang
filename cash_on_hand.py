@@ -37,12 +37,17 @@ def cash_on_hand_function():
     messages = []
     # create a while loop to add in the cash deficit from day 40 to 50
     while num < len(amt_coh):
+      # start handling exception 
       try:
         # extract the amount and change it into a float and find the difference on cash on hand between each day
         diff = float(amt_coh[num]) - float(amt_coh[num-1])
+      # handling ValueError
       except ValueError:
+        # append the message for ValueError into an empty list
         messages.append("Make sure it is a number")
+        # return the message for ValueError
         return messages
+      # when there is no exceptions
       else:
         # append the difference into an empty list
         difference.append(diff)
